@@ -8,7 +8,7 @@ const func = async () => {
     try {
       await fs.promises.mkdir(newPathDir, {recursive: true})
       const dirFiles = await fs.promises.readdir(pathDir)
-      dirFiles.forEach(file => fs.promises.copyFile(pathDir + '\\' + file, newPathDir  + '\\' + file))
+      dirFiles.forEach(file => fs.promises.copyFile(pathDir + '\\' + file, newPathDir + '\\' + file))
     }
     catch(err) {
       console.log(err)
